@@ -12,6 +12,27 @@ html {
   scroll-behavior: smooth;
 }
 
+.gold {
+  color: gold;
+}
+
+.subtitle {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-top: 50px;
+}
+
+.buttonBlack {
+  background-color: #111;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.buttonBlack:hover {
+  transform: scale(1.1);
+}
+
 img {
   display: block;
 }
@@ -85,16 +106,6 @@ body {
   gap: 30px;
   margin-top: 20px;
 }
-.grid-hero .containerButton .buttonBlack {
-  background-color: #111;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-.grid-hero .containerButton .buttonBlack:hover {
-  transform: scale(1.1);
-}
 .grid-hero .containerButton .button {
   font-size: 1.3rem;
   transition: 0.3s;
@@ -119,8 +130,8 @@ body {
 .about .grid-hero-about {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: start;
   align-content: space-evenly;
+  justify-items: center;
 }
 .about .message {
   color: gold;
@@ -143,6 +154,148 @@ body {
   color: #eaeaea;
   margin-bottom: 20px;
   line-height: 30px;
+  letter-spacing: 1px;
+}
+
+.certificates .subtitle {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.certificates ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.certificates ul li {
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.certificates ul li:hover {
+  transform: scale(1.1);
+}
+.certificates img {
+  border-radius: 5px;
+  width: 600px;
+  height: 400px;
+}
+.certificates .gridResults {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.certificates .gridResults img {
+  width: 400px;
+}
+
+.containerSubtitle {
+  margin-bottom: 30px;
+}
+.containerSubtitle .descriptionSubtitle {
+  font-size: 2rem;
+}
+.containerSubtitle span {
+  font-size: 3rem;
+}
+
+.gridSkills .skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+.gridSkills .skills li {
+  display: grid;
+  justify-items: center;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.gridSkills .skills li:hover {
+  transform: scale(1.1);
+}
+.gridSkills .skills li p {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.gridSkills .skills li img {
+  max-width: 100px;
+}
+
+.motivation {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.motivation span {
+  font-size: 2rem;
+}
+.motivation p {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.contact {
+  padding-bottom: 50px;
+}
+.contact .subtitleContact {
+  font-size: 3.5rem;
+  font-weight: 900;
+  padding-top: 50px;
+  margin-bottom: 50px;
+  color: #fff;
+  text-align: center;
+}
+.contact .logoFooter {
+  color: gold;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.contact .gridFooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.contact .gridContact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+}
+.contact a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+.contact p {
+  color: #fff;
+  font-size: 1.5rem;
+  max-width: 20ch;
+}
+.contact .gridSocial {
+  display: flex;
+  gap: 40px;
+}
+.contact .gridSocial img {
+  width: 50px;
+  height: 50px;
+  transition: all ease 0.3s;
+}
+.contact .gridSocial img:hover {
+  transform: scale(1.1);
+}
+
+.contentFooter .work {
+  color: #d1d0d0;
+}
+
+.footer {
+  background-color: #232323;
+  text-align: center;
+  padding: 10px 0px;
+}
+.footer p {
+  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */

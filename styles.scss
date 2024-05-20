@@ -10,7 +10,26 @@
 html {
   scroll-behavior: smooth;
 }
+.gold {
+  color: gold;
+}
+.subtitle {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-top: 50px;
+}
 
+.buttonBlack {
+  background-color: #111;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
 img {
   display: block;
 }
@@ -46,6 +65,7 @@ body {
     color: gold;
     font-size: 2.5rem;
   }
+
   ul {
     display: flex;
     gap: 50px;
@@ -88,17 +108,6 @@ body {
     gap: 30px;
     margin-top: 20px;
 
-    .buttonBlack {
-      background-color: #111;
-      color: #fff;
-      padding: 10px 15px;
-      border-radius: 5px;
-      transition: 0.3s;
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-
     .button {
       font-size: 1.3rem;
       transition: 0.3s;
@@ -126,8 +135,8 @@ body {
   .grid-hero-about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: start;
     align-content: space-evenly;
+    justify-items: center;
   }
   .message {
     color: gold;
@@ -153,8 +162,162 @@ body {
         color: #eaeaea;
         margin-bottom: 20px;
         line-height: 30px;
+        letter-spacing: 1px;
       }
     }
   }
 }
 
+.certificates {
+  .subtitle {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+
+    li {
+      cursor: pointer;
+      transition: all ease 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  img {
+    border-radius: 5px;
+    width: 600px;
+    height: 400px;
+  }
+
+  .gridResults {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    img {
+      width: 400px;
+    }
+  }
+}
+.containerSubtitle {
+  .descriptionSubtitle {
+    font-size: 2rem;
+  }
+
+  span {
+    font-size: 3rem;
+  }
+  margin-bottom: 30px;
+}
+
+.gridSkills {
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+
+    li {
+      display: grid;
+      justify-items: center;
+      cursor: pointer;
+      transition: all ease 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      p {
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      img {
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+.motivation {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  span {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+  }
+}
+
+.contact {
+  padding-bottom: 50px;
+  .subtitleContact {
+    font-size: 3.5rem;
+    font-weight: 900;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    color: #fff;
+    text-align: center;
+  }
+  .logoFooter {
+    color: gold;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .gridFooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .gridContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+  }
+  a {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  p {
+    color: #fff;
+    font-size: 1.5rem;
+    max-width: 20ch;
+  }
+  .gridSocial {
+    display: flex;
+    gap: 40px;
+    img {
+      width: 50px;
+      height: 50px;
+      transition: all ease 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.contentFooter {
+  .work {
+    color: #d1d0d0;
+  }
+}
+
+.footer {
+  background-color: #232323;
+  text-align: center;
+  padding: 10px 0px;
+  p{
+    color: #fff;
+
+  }
+}
