@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* Estilos gerais */
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +10,64 @@
   color: #111;
 }
 
+/* Menu hambúrguer */
+.line {
+  border-radius: 2px;
+  cursor: pointer;
+  display: block;
+  height: 4px;
+  width: 30px;
+  margin-bottom: 5px;
+  background-color: #111;
+}
+
+.line3 {
+  width: 20px;
+}
+
+.menu-hamburguer {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  background-color: #181a1b;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.menu-hamburguer ul {
+  margin-top: 20px;
+}
+
+.menu-hamburguer ul li a {
+  color: #fff; /* Cor branca */
+  font-size: 1.5rem;
+  display: block;
+}
+
+.menu-close {
+  color: #fff; /* Cor branca */
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.menuBurguer {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .menuBurguer {
+    display: block;
+  }
+}
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden !important;
 }
 
 .gold {
@@ -20,6 +78,16 @@ html {
   font-size: 3.5rem;
   font-weight: 900;
   margin-top: 50px;
+}
+@media (max-width: 1000px) {
+  .subtitle {
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .subtitle {
+    font-size: 2em;
+  }
 }
 
 .buttonBlack {
@@ -65,9 +133,19 @@ body {
   margin-bottom: 40px;
   margin-top: 20px;
 }
+@media (max-width: 750px) {
+  .header {
+    justify-content: space-evenly;
+  }
+}
 .header .logo {
   color: gold;
   font-size: 2.5rem;
+}
+@media (max-width: 750px) {
+  .header .logo {
+    margin-left: -40px;
+  }
 }
 .header ul {
   display: flex;
@@ -80,6 +158,11 @@ body {
 .header ul li a:hover {
   color: rgb(255, 217, 0);
 }
+@media (max-width: 750px) {
+  .header ul li {
+    display: none;
+  }
+}
 
 .hero {
   margin-bottom: 100px;
@@ -91,20 +174,58 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 1000px) {
+  .grid-hero {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+}
 .grid-hero .content {
   display: grid;
 }
 .grid-hero .tittle {
   font-size: 3rem;
 }
+@media (max-width: 1000px) {
+  .grid-hero .tittle {
+    text-align: center;
+  }
+}
 .grid-hero span {
   font-size: 3rem;
+}
+@media (max-width: 1000px) {
+  .grid-hero span {
+    text-align: center;
+  }
+}
+@media (max-width: 1000px) {
+  .grid-hero p {
+    text-align: center;
+  }
+}
+@media (max-width: 750px) {
+  .grid-hero p {
+    max-width: 30ch;
+    margin-left: 40px;
+  }
 }
 .grid-hero .containerButton {
   display: flex;
   align-items: center;
   gap: 30px;
   margin-top: 20px;
+}
+@media (max-width: 1000px) {
+  .grid-hero .containerButton {
+    justify-content: center;
+  }
+}
+@media (max-width: 750px) {
+  .grid-hero .containerButton {
+    flex-direction: column;
+  }
 }
 .grid-hero .containerButton .button {
   font-size: 1.3rem;
@@ -118,6 +239,17 @@ body {
   width: 600px;
   height: 400px;
   margin-top: 50px;
+}
+@media (max-width: 750px) {
+  .grid-hero img {
+    width: 500px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 500px) {
+  .grid-hero img {
+    display: none;
+  }
 }
 
 .bg {
@@ -133,6 +265,13 @@ body {
   align-content: space-evenly;
   justify-items: center;
 }
+@media (max-width: 750px) {
+  .about .grid-hero-about {
+    grid-template-columns: 1fr;
+    padding: 0px 20px;
+    text-align: center;
+  }
+}
 .about .message {
   color: gold;
   font-size: 10rem;
@@ -141,20 +280,42 @@ body {
   max-width: 3ch;
   margin-top: 20px;
 }
+@media (max-width: 750px) {
+  .about .message {
+    display: none;
+  }
+}
 .about .content-about h2 {
   color: #fff;
   font-size: 2rem;
   margin-top: 50px;
 }
+@media (max-width: 750px) {
+  .about .content-about h2 {
+    text-align: center;
+  }
+}
 .about .content-about span {
   color: gold;
   font-size: 5rem;
+}
+@media (max-width: 750px) {
+  .about .content-about span {
+    display: block;
+    text-align: center;
+  }
 }
 .about .content-about .content-text p {
   color: #eaeaea;
   margin-bottom: 20px;
   line-height: 30px;
   letter-spacing: 1px;
+}
+@media (max-width: 750px) {
+  .about .content-about .content-text p {
+    line-height: 38px;
+    max-width: 45ch;
+  }
 }
 
 .certificates .subtitle {
@@ -166,6 +327,23 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+}
+@media (max-width: 1000px) {
+  .certificates ul {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .certificates ul {
+    display: flex;
+    gap: 20px;
+  }
 }
 .certificates ul li {
   cursor: pointer;
@@ -174,17 +352,51 @@ body {
 .certificates ul li:hover {
   transform: scale(1.1);
 }
+@media (max-width: 500px) {
+  .certificates ul li {
+    min-width: 500px;
+  }
+}
 .certificates img {
   border-radius: 5px;
-  width: 600px;
+  width: 500px;
   height: 400px;
+}
+@media (max-width: 750px) {
+  .certificates img {
+    max-width: max-content;
+  }
 }
 .certificates .gridResults {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  overflow-x: auto;
+  max-width: 1000px;
+}
+@media (max-width: 1000px) {
+  .certificates .gridResults {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .certificates .gridResults {
+    display: flex;
+  }
 }
 .certificates .gridResults img {
-  width: 400px;
+  max-width: 400px;
+}
+@media (max-width: 500px) {
+  .certificates .gridResults img {
+    max-width: 350px;
+    gap: 0px;
+  }
+  .certificates .gridResults img li {
+    min-height: 400px;
+  }
 }
 
 .containerSubtitle {
@@ -192,15 +404,37 @@ body {
 }
 .containerSubtitle .descriptionSubtitle {
   font-size: 2rem;
+  text-align: center;
 }
-.containerSubtitle span {
+.containerSubtitle .decoration {
   font-size: 3rem;
+  display: block;
+}
+@media (max-width: 1000px) {
+  .containerSubtitle .decoration {
+    text-align: center;
+  }
 }
 
 .gridSkills .skills {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 50px;
+}
+@media (max-width: 1000px) {
+  .gridSkills .skills {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .gridSkills .skills {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    justify-items: center;
+    align-items: center;
+  }
 }
 .gridSkills .skills li {
   display: grid;
@@ -217,6 +451,17 @@ body {
   font-size: 1.2rem;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+@media (max-width: 1000px) {
+  .gridSkills .skills li p {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 1000px) {
+  .gridSkills .skills li span {
+    text-align: center;
+    max-width: 20ch;
+  }
 }
 .gridSkills .skills li img {
   max-width: 100px;
@@ -235,9 +480,19 @@ body {
   font-weight: 900;
   margin-bottom: 30px;
 }
+@media (max-width: 1000px) {
+  .motivation p {
+    font-size: 3.1rem;
+  }
+}
 
 .contact {
-  padding-bottom: 50px;
+  padding-bottom: 100px;
+}
+@media (max-width: 1000px) {
+  .contact {
+    padding-bottom: 200px;
+  }
 }
 .contact .subtitleContact {
   font-size: 3.5rem;
@@ -252,9 +507,22 @@ body {
   font-size: 2rem;
   margin-bottom: 30px;
 }
+@media (max-width: 1000px) {
+  .contact .logoFooter {
+    text-align: center;
+  }
+}
 .contact .gridFooter {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 1000px) {
+  .contact .gridFooter {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 30px;
+  }
 }
 .contact .gridContact {
   display: flex;
@@ -262,6 +530,12 @@ body {
   justify-content: center;
   align-items: start;
   gap: 10px;
+}
+@media (max-width: 1000px) {
+  .contact .gridContact {
+    text-align: center;
+    align-items: normal;
+  }
 }
 .contact a {
   color: #fff;
@@ -292,10 +566,20 @@ body {
 .footer {
   background-color: #232323;
   text-align: center;
-  padding: 10px 0p;
+  padding: 20px 0px;
 }
 .footer p {
   color: #fff;
+}
+@media (max-width: 1000px) {
+  .footer p {
+    padding-bottom: 250px;
+  }
+}
+@media (max-width: 1000px) and (max-width: 750px) {
+  .footer p {
+    padding-bottom: 20px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
