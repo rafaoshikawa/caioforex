@@ -135,10 +135,10 @@ body {
 }
 .about .message {
   color: gold;
-  font-size: 6rem;
-  line-height: 1.5;
+  font-size: 10rem;
+  line-height: 1.1;
   word-break: break-all;
-  max-width: 6ch;
+  max-width: 3ch;
   margin-top: 20px;
 }
 .about .content-about h2 {
@@ -292,7 +292,7 @@ body {
 .footer {
   background-color: #232323;
   text-align: center;
-  padding: 10px 0px;
+  padding: 10px 0p;
 }
 .footer p {
   color: #fff;
