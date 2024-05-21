@@ -37,31 +37,45 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding: 20px;
+  text-align: center;
 }
 
-.menu-hamburguer ul {
-  margin-top: 20px;
-}
-.menu-hamburguer ul li a {
-  color: #fff; /* Cor branca */
+.menu-hamburguer a {
+  color: #fff;
   font-size: 1.5rem;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
 }
 
 .menu-close {
-  color: #fff; /* Cor branca */
+  color: #fff;
   font-size: 2rem;
   cursor: pointer;
+  align-self: flex-end;
 }
 
 .menuBurguer {
   display: none;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 450px) {
   .menuBurguer {
     display: block;
   }
+
+  .header ul {
+    display: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+}
+
+.gold {
+  color: gold;
 }
 
 html {
@@ -99,20 +113,6 @@ img {
   display: block;
 }
 
-@font-face {
-  font-family: "linik";
-  src: url("../fonts/LinikSans-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "linik";
-  src: url("../fonts/LinikSans-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
 body {
   background-color: #f5f5f5;
 }
@@ -127,7 +127,12 @@ body {
   margin-bottom: 40px;
   margin-top: 20px;
   @media (max-width: 750px) {
-    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  @media (max-width: 459px) {
+    flex-direction: row;
+    padding-left: 50px;
+    padding-right: 20px;
   }
   .logo {
     color: gold;
@@ -140,6 +145,9 @@ body {
   ul {
     display: flex;
     gap: 50px;
+    @media (max-width: 750px) {
+      display: none;
+    }
 
     li {
       a {
@@ -149,9 +157,6 @@ body {
         &:hover {
           color: rgb(255, 217, 0);
         }
-      }
-      @media (max-width: 750px) {
-        display: none;
       }
     }
   }
@@ -181,7 +186,7 @@ body {
       text-align: center;
     }
   }
-  span {
+  span h2 {
     font-size: 3rem;
     @media (max-width: 1000px) {
       text-align: center;
@@ -308,11 +313,11 @@ body {
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
-    overflow-x: auto;
     @media (max-width: 1000px) {
       grid-template-columns: 1fr;
       justify-items: center;
       align-items: center;
+      overflow-x: auto;
     }
     @media (max-width: 500px) {
       display: flex;
@@ -341,7 +346,8 @@ body {
   .gridResults {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    overflow-x: auto;
+    justify-content: center;
+
     max-width: 1000px;
     @media (max-width: 1000px) {
       grid-template-columns: 1fr;
@@ -367,7 +373,9 @@ body {
 .containerSubtitle {
   .descriptionSubtitle {
     font-size: 2rem;
-    text-align: center;
+    @media (max-width: 700px) {
+      text-align: center;
+    }
   }
 
   .decoration {
