@@ -467,7 +467,7 @@ body {
   transition: all ease 0.3s;
 }
 .gridSkills .skills li:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
 }
 .gridSkills .skills li p {
   font-weight: 900;
